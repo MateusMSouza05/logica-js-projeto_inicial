@@ -3,7 +3,8 @@ alert('Boa vindas ao jogo do número secreto');
 
 /*let é a variável utilizada no JS aonde atribuimmos um nome e um valor a essa var*/
 /*prompt serve para podermos interagir com usuário fazendo ele escrever*/
-let numeroSecreto = 15;
+let numeroMaximo = 5000;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo) + 1;
 let chute;
 let tentativas = 1;
 console.log(numeroSecreto);
@@ -14,7 +15,7 @@ console.log(numeroSecreto);
 // para concatenar valores, utilizamos a crase e para mostrar o valor da var usamos o ${}
 
 while (chute != numeroSecreto) {
-   chute = prompt('Escolha um número entre 1 e 30');
+   chute = prompt(`Escolha um número entre 1 e ${numeroMaximo}`);
 
    if (chute == numeroSecreto) {
       break;
